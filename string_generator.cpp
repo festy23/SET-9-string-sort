@@ -37,7 +37,6 @@ std::vector<std::string> StringGenerator::nearlySortedArray(size_t n, std::mt199
     auto arr = randomArray(n, rng);
     std::sort(arr.begin(), arr.end());
 
-    // ~5% соседних перестановок
     size_t swaps = std::max(size_t(1), n / 20);
     std::uniform_int_distribution<size_t> idxDist(0, n - 2);
     for (size_t i = 0; i < swaps; ++i) {
@@ -50,7 +49,6 @@ std::vector<std::string> StringGenerator::nearlySortedArray(size_t n, std::mt199
 std::vector<std::string> StringGenerator::sharedPrefixArray(size_t n, std::mt19937& rng) {
     auto arr = randomArray(n, rng);
 
-    // Для 50% строк задаём общий префикс длины 20..50
     static std::uniform_int_distribution<size_t> prefixLenDist(20, 50);
     static std::uniform_int_distribution<size_t> charDist(0, ALPHABET.size() - 1);
 

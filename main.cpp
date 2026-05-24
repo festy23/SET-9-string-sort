@@ -6,7 +6,7 @@ int main() {
     std::cout << "SET 9 — String Sort Empirical Analysis\n";
     std::cout << "=======================================\n";
 
-    StringSortTester tester(/*seed=*/42);
+    StringSortTester tester(42);
     tester.runAllTests();
 
     return 0;

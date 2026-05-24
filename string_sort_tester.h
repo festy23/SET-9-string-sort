@@ -17,8 +17,6 @@ public:
 
     explicit StringSortTester(unsigned seed = 42);
 
-    // Прогоняет алгоритм на всех размерах из массива sizes,
-    // берёт подмассивы из masterArray, усредняет по repetitions замеров
     std::vector<Measurement> testAlgorithm(
         SortFn sortFn,
         const std::vector<std::string>& masterArray,
@@ -26,7 +24,6 @@ public:
         int repetitions = 5
     );
 
-    // Запускает все тесты (6 алгоритмов × 4 типа данных) и пишет CSV
     void runAllTests();
 
 private:
