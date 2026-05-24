@@ -1,0 +1,4 @@
+*.o
+string_sort_test
+__pycache__/
+.DS_Store
